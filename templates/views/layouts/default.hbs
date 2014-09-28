@@ -28,7 +28,7 @@
                         <img class="logo-small" src="/images/hilltop-logo.svg">
                     </div>
                     <div class="col-sm-4">
-                        <h2>512-294-7209</h2>
+                        <h2><a href=tel:512-294-7209>512-294-7209</a></h2>
                     </div>
                 </div>
 				<div role="navigation" class="navbar navbar-default">
@@ -48,13 +48,13 @@
 									</li>
 								{{/each}}
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								{{#if user}}
+                            <!-- <ul class="nav navbar-nav navbar-right">
+							{{#if user}}
 								<li><a href="/keystone/signout">Sign Out</a></li>
-								{{else}}
+							{{else}}
 								<li><a href="/keystone/signin">Sign In</a></li>
-								{{/if}}
-							</ul>
+							{{/if}}
+							</ul> -->
 						</div>
 					</div>
 				</div>
@@ -108,6 +108,7 @@
 			//- them specifically here, instead of bootstrap-3.2.0.min.js
 		--}}
 		<script src="/js/lib/bootstrap/bootstrap-3.2.0.min.js"></script>
+        <script src="/js/site.js"></script>
 		{{{isAdminEditorJS user}}}
 	</body>
 </html>

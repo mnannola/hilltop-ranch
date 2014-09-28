@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Prices</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="animals">
+            {{#each data.animals.results}}
+                <div class="col-md-6">
+                    <section class="card">
+                        <h3>{{{name}}}</h3>
+                        <span class="animal-content">{{{content}}}</span>
+                        <img src="{{{image.url}}}">
+                        <h4>Price: ${{{price}}} and up.</h4>
+                    </section>
+                </div>
+            {{/each}}
+        </div>        
+    </div>
+</div>

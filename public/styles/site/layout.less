@@ -1,3 +1,7 @@
+p{
+    padding: 10px 20px;
+}
+
 #header {
 	margin-top: 30px;
 }
@@ -7,6 +11,10 @@
 	border-top: 1px solid @gray-lighter;
 	padding-top: 30px;
 	color: @gray-light;
+}
+
+iframe, object, embed {
+    max-width: 100%;
 }
 
 .gallery-image img{
@@ -21,4 +29,61 @@
 
 .logo-small{
     width: 50px;
+}
+
+.container{
+    background-color:#FFF;
+}
+
+.card {
+    background-color: #FFF;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px #aaa;
+    margin: 0 1rem 1rem;
+    user-select:none;
+    overflow: hidden;
+    -webkit-animation:fly-in-from-left .5s .5s ease both;
+    animation:fly-in-from-left .5s .5s ease both;
+    transform-origin:top left;
+}
+
+.card:nth-child(even){
+    -webkit-animation-name:fly-in-from-right;
+    -webkit-animation-delay: .6s;
+    animation-name:fly-in-from-right;
+    animation-delay: .6s;
+    transform-origin:top right;
+}
+
+@-webkit-keyframes fly-in-from-left {
+    from {
+        transform:translateY(15rem) rotate(15deg);
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fly-in-from-right {
+    from {
+        transform:translateY(15rem) rotate(-15deg);
+        opacity:0;
+    }
+}
+
+@keyframes fly-in-from-left {
+    from {
+        transform:translateY(15rem) rotate(15deg);
+        opacity:0;
+    }
+}
+
+@keyframes fly-in-from-right {
+    from {
+        transform:translateY(15rem) rotate(-15deg);
+        opacity:0;
+    }
+}
+
+.card:after {
+    position:absolute;
+    border:thin solid gray;   
 }
